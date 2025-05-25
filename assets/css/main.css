@@ -212,6 +212,42 @@ input, select, textarea {
 		color: #c1cac5;
 	}
 
+/* Contactform */	
+	#contact-form {
+  		max-width: 600px;
+  		margin: auto;
+  		background: white;
+  		padding: 2em;
+  		border-radius: 8px;
+  		box-shadow: 0 0 10px rgba(0,0,0,0.1);
+	}
+
+	form label {
+  		display: block;
+  		margin: 0 0 0.5em;
+	}
+
+	form input, form textarea {
+  		width: 100%;
+  		padding: 0;
+  		border: 1px solid #ccc;
+  		border-radius: 4px;
+	}
+
+	form button {
+  		margin-top: 1em;
+  		padding: 0.8em 1.5em;
+  		background-color: #00c62b;
+  		color: white;
+  		border: none;
+  		border-radius: 4px;
+  		cursor: pointer;
+	}
+
+	form button:hover {
+  		background-color: #015b04;
+	}
+
 /* Container */
 
 	.container {
@@ -2094,7 +2130,7 @@ input, select, textarea {
 
 	form label {
 		display: block;
-		margin: 0 0 1em 0;
+		margin: 0 0 0 0;
 		font-family: 'Open Sans Condensed', sans-serif;
 		font-weight: 700;
 		text-transform: uppercase;
@@ -2478,30 +2514,48 @@ input, select, textarea {
 
 	#banner {
 		position: relative;
-		background-image: url("images/overlay.png"), url("images/overlay.png"), url("../../images/banner.jpg");
-		background-position: top left, top left, center center;
-		background-repeat: repeat, repeat, no-repeat;
-		background-size: auto, auto, cover;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		background-image: url("../../images/banner1.jpeg");
+		background-position: center center;
+		background-repeat: no-repeat;
+		background-size: cover;
 		z-index: 1;
-		padding: 11em 0;
+		padding: 6em 2em;
+		flex-wrap: wrap;
 	}
+
+		#banner .image {
+			flex: 1;
+			max-width: 33.33%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+		#banner .image img {
+		max-width: 100%;
+		height: auto;
+		}
 
 		#banner .content {
 			position: relative;
-			background-color: rgba(21, 28, 23, 0.85);
+			flex: 2;
+			background-color: rgba(53, 138, 77, 0.85);
 			background-image: url("images/overlay.png"), url("images/highlight.png");
 			background-position: top left, center center;
 			background-size: auto, 100% 250%;
 			background-repeat: repeat, no-repeat;
 			text-align: center;
 			margin: 0;
-			padding: 4em 0 3.5em 0;
+			padding: 2em;
 		}
 
+			
 			#banner .content h2 {
 				color: #fff;
-				font-size: 2.75em;
-				margin: 0 0 0.5em 0;
+				font-size: 6.00em;
+				margin: 0 0 0 0;
 			}
 
 			#banner .content p {
@@ -2509,9 +2563,9 @@ input, select, textarea {
 				font-family: 'Open Sans Condensed', sans-serif;
 				font-weight: 700;
 				text-transform: uppercase;
-				color: #575d59;
-				font-size: 1.35em;
-				margin: 0 0 1.25em 0;
+				color: #fff;
+				font-size: 1.5em;
+				margin: 0 0 0 0;
 			}
 
 			#banner .content .button {
@@ -2519,21 +2573,21 @@ input, select, textarea {
 				-webkit-transition: border-color .2s ease-in-out, color .2s ease-in-out;
 				-ms-transition: border-color .2s ease-in-out, color .2s ease-in-out;
 				transition: border-color .2s ease-in-out, color .2s ease-in-out;
-				color: #b4b7b5;
+				color: #fff;
 				background: transparent !important;
-				border: solid 4px #575d59;
-				border-color: rgba(87, 93, 89, 0.35);
-				font-size: 1.5em;
+				border: solid 4px #fff;
+				border-color: #fff;
+				font-size: 1.35em;
 			}
 
 				#banner .content .button:hover {
 					color: #e4e7e5;
-					border-color: rgba(87, 93, 89, 0.75);
+					border-color: rgba(55, 255, 0, 0.75);
 				}
 
 				#banner .content .button:active {
 					color: #fff;
-					border-color: #616763;
+					border-color: #00802b;
 				}
 
 /* Main */
@@ -2666,7 +2720,7 @@ input, select, textarea {
 				}
 
 					#banner .content h2 {
-						margin: 0 0 0.65em 0;
+						margin: 0 0 0 0;
 					}
 
 					#banner .content p {
@@ -2717,8 +2771,12 @@ input, select, textarea {
 		/* Banner */
 
 			#banner {
-				padding: calc(14em + 44px) 0 14em 0;
+				padding: calc(14em + 44px) 1 14em 1;
 			}
+
+  			#banner .content {
+    		padding: 2em 1em;
+  			}
 
 		/* Nav */
 
@@ -2777,7 +2835,7 @@ input, select, textarea {
 				top: 0;
 				width: 100%;
 				z-index: 10001;
-				background-color: rgba(21, 38, 23, 0.8);
+				background-color: rgba(253, 253, 253, 0.8);
 				background-image: url("images/overlay.png");
 			}
 
@@ -2789,7 +2847,7 @@ input, select, textarea {
 					text-transform: uppercase;
 					font-size: 1.25em;
 					line-height: 44px;
-					color: #fff;
+					color: #60cd7f;
 					z-index: 1000;
 					text-align: center;
 				}
@@ -3048,20 +3106,21 @@ input, select, textarea {
 		/* Banner */
 
 			#banner {
-				padding: calc(6em + 44px) 0 6em 0;
-			}
+    			flex-direction: column;
+    			text-align: center;
+    			padding: 4em 1.5em;
+  			}
 
-				#banner .content {
-					padding: 4em 2.5em 3em 2.5em;
-				}
+  			#banner .banner-left,
+  			#banner .content {
+    			flex: unset;
+    			padding: 1em 0;
+  			}
 
-					#banner .content h2 {
-						font-size: 2em;
-					}
-
-					#banner .content p {
-						font-size: 1.25em;
-					}
+  			#banner .content {
+    		padding: 2em 1em;
+  			}
+}
 
 		/* Main */
 
@@ -3092,7 +3151,7 @@ input, select, textarea {
 				line-height: 1.75em;
 			}
 
-	}
+	
 
 /* Small */
 
