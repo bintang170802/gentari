@@ -1,0 +1,9 @@
+{
+  "name": "html5up-txt",
+  "version": "1.0.0",
+  "main": "index.js",
+  "dependencies": {
+    "docx": "^7.0.0",
+    "googleapis": "^118.0.0"
+  }
+}
